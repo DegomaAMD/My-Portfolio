@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./assets/favicon.ico">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,54 +20,59 @@
 <body>
     <header>
         <nav class="navbar navigation-bar">
-            <a href="#" class="navbar-brand"><img class="rounded-circle" src="./assets/LOGO.png" alt="logo" width="90"></a>
-            <ul class="navbar-nav">
+            <a href="#" class="navbar-brand"><img class="rounded-circle" src="./assets/LOGO.png" alt="logo" width="70"></a>
+            <ul class="navbar-nav d-none d-lg-flex">
                 <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
                 <li class="nav-item"><a class="nav-link" href="#about-me">About me</a></li>
                 <li class="nav-item"><a class="nav-link" href="#service">Service</a></li>
             </ul>
-            <a href="#contact" class="btn contact-me-btn">Contact me</a>
-            <i class="fa-solid fa-bars-staggered btn d-md-none" data-bs-toggle="offcanvas" href="#offcanvasNavbar" role="button" aria-controls="offcanvasNavbar"></i>
+            <a href="#contact" class="btn contact-me-btn d-none d-lg-flex">Contact me</a>
+            <i class="fa-solid fa-bars-staggered btn d-lg-none" data-bs-toggle="offcanvas" href="#offcanvasNavbar" role="button" aria-controls="offcanvasNavbar"></i>
         </nav>
-        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-           <div class="offcanvas-body">
-            <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-                <li class="nav-item"><a class="nav-link" href="#about-me">About me</a></li>
-                <li class="nav-item"><a class="nav-link" href="#service">Service</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contact">Contact me</a></li>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header d-flex justify-content-end">
+                <button type="button" class="btn-close " data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+           <div class="offcanvas-body d-flex justify-content-between">
+            <ul class="navbar-nav d-flex justify-content-center align-content-center ">
+                <li class="nav-item my-3 fs-3"><a class="nav-link" href="#home">Home</a></li>
+                <li class="nav-item my-3 fs-3"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                <li class="nav-item my-3 fs-3"><a class="nav-link" href="#about-me">About me</a></li>
+                <li class="nav-item my-3 fs-3"><a class="nav-link" href="#service">Service</a></li>
+                <li class="nav-item my-3 fs-3"><a class="nav-link" href="#contact">Contact me</a></li>
             </ul>
            </div>
 
         </div>
     </header>
     <section id="home">
-        <div>
+        <div data-aos="fade-right">
             <h3>Hey, I am Andria Mae</h3>
             <h1>I create <span class="creation">responsive website</span> with great user experience.</h1>
             <p>I develop experiences that make people's lives simpler through Web apps. I work with HTML5, CSS3, JavaScript, React, and Laravel</p>
             <button type="button">Get in touch</button>
         </div>
-        <div>
+        <div data-aos="fade-up">
             <img src="./assets/home-pic.png" alt="profile pic">
         </div>
         
     </section>
     <section id="service">
         <div class="service-content">
-            <h3>Services</h3>
-            <h2>My Expertise</h2>
+            <h3 data-aos="zoom-out-up">Services</h3>
+            <h2 data-aos="zoom-out-up">My Expertise</h2>
             <div class="service-card">
-                <div class="card">
+                <div class="card" data-aos="fade-up"
+                data-aos-duration="1000">
                     <img class="service-img1" src="./assets/feather-pen 1.png" alt="logo 1" width="54">
                     <div class="card-body">
                          <h3 class="card-text service-title">Responsive design</h3>
                          <p class="card-text service-description">Create websites that automatically adapt to different screen sizes, ensuring a consistent user experience across devices.</p>
                     </div>
                  </div>
-                 <div class="card"> 
+                 <div class="card" data-aos="fade-up"
+                 data-aos-duration="2000"> 
                      <img class="service-img2"  src="./assets/feather-pen 2.png" alt="logo 2" width="54">
                      <div>
                          <h3 class="card-text service-title">Mobile optimization</h3>
@@ -78,48 +84,56 @@
     </section>
     <section id="skills">
         <div class="skills-content">
-            <h3>Skills</h3>
-            <h2>Tech Skills</h2>
+            <h3 data-aos="zoom-out-up">Skills</h3>
+            <h2 data-aos="zoom-out-up">Tech Skills</h2>
             <div class="skills-cards">
-                    <div class="card tech-stacks">
+                    <div class="card tech-stacks" data-aos="fade-up"
+     data-aos-anchor-placement="bottom-bottom">
                         <h2>HTML</h2>
                         <img src="./assets/HTML.png" alt="" width="70">
                         <p>Hypertext Markup Language</p>
                     </div>
-                    <div class="card tech-stacks">
+                    <div class="card tech-stacks" data-aos="fade-up"
+     data-aos-anchor-placement="bottom-bottom">
                         <h2>CSS</h2>
                         <img src="./assets/CSS.png" alt="" width="70">
                         <p>Cascading Style Sheets</p>
                     </div>
-                    <div class="card tech-stacks">
+                    <div class="card tech-stacks" data-aos="fade-up"
+     data-aos-anchor-placement="bottom-bottom">
                         <h2>Javascript</h2>
                         <img src="./assets/javascript.png" alt="" width="70">
                         <p>Client Scripting Language</p>
                     </div>
                 
                 
-                    <div class="card tech-stacks">
+                    <div class="card tech-stacks" data-aos="fade-up"
+     data-aos-anchor-placement="bottom-bottom">
                         <h2>Bootstrap</h2>
                         <img src="./assets/Bootstrap.png" alt="" width="70">
                         <p>CSS Framework</p>
                     </div>
-                    <div class="card tech-stacks">
+                    <div class="card tech-stacks" data-aos="fade-up"
+     data-aos-anchor-placement="bottom-bottom">
                         <h2>React</h2>
                         <img src="./assets/react.png" alt="" width="70" class="my-4">
                         <p>Front-end Framework</p>
                     </div>         
                 
-                    <div class="card tech-stacks">
+                    <div class="card tech-stacks" data-aos="fade-up"
+     data-aos-anchor-placement="bottom-bottom">
                         <h2>NodeJS</h2>
                         <img src="./assets/nodejs.png" alt="" width="70">
                         <p>Server Scripting Language</p>
                     </div>
-                    <div class="card tech-stacks">
+                    <div class="card tech-stacks" data-aos="fade-up"
+     data-aos-anchor-placement="bottom-bottom">
                         <h2>ExpressJS</h2>
                         <img src="./assets/express.png" alt="" width="70" class="my-5">
                         <p>Back-end Framework</p>
                     </div>                   
-                    <div class="card tech-stacks">
+                    <div class="card tech-stacks" data-aos="fade-up"
+     data-aos-anchor-placement="bottom-bottom">
                         <h2>MySQL</h2>
                         <img src="./assets/mysql.png" alt="" width="70">
                         <p>SQL Database</p>
@@ -135,8 +149,8 @@
             <img src="./assets/about-pic.jpeg" alt="prof pic" class="rounded-circle" width="420px">
         </div>
         <div>
-            <h3>About</h3>
-            <h2>About Me</h2>
+            <h3 data-aos="zoom-out-up">About</h3>
+            <h2 data-aos="zoom-out-up">About Me</h2>
             <p>Hello, my name is <span>Andria Mae Degoma</span>, and I'm 26 years old. I have a strong interest in coding and I enjoy exploring new projects in my free time.</p>
             <p>If you have any specific requirements or preferences, you can send me a message to the form below and i'll response ASAP.</p>
             <div class="mt-5">
@@ -148,10 +162,11 @@
     </section>
     <section id="portfolio">
         <div class="portfolio-content">
-            <h3>Recent Projects</h3>
-            <h2>My Portfolio</h2>
+            <h3 data-aos="zoom-out-up">Recent Projects</h3>
+            <h2 data-aos="zoom-out-up">My Portfolio</h2>
             <div class="portfolio-cards">
-                <div class="card">
+                <div class="card" data-aos="fade-up"
+                data-aos-anchor-placement="top-center">
                     <img src="./assets/portfolio.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Card title</h5>
@@ -159,7 +174,8 @@
                         <a href="#" class="btn btn-primary">Go somewhere</a>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" data-aos="fade-up"
+                data-aos-anchor-placement="top-center">
                     <img src="./assets/bon-cafe.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Card title</h5>
@@ -167,7 +183,8 @@
                         <a href="#" class="btn btn-primary">Go somewhere</a>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" data-aos="fade-up"
+                data-aos-anchor-placement="top-center">
                     <img src="./assets/vizmaker-cafe.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Card title</h5>
@@ -181,11 +198,11 @@
     </section>
     <section id="contact">
         <div class="contact-content">
-            <h3>Get in Touch</h3>
-            <h2>Contact me</h2>
+            <h3 data-aos="zoom-out-up">Get in Touch</h3>
+            <h2 data-aos="zoom-out-up">Contact me</h2>
             <p>If you're interested in working together or have any questions, feel free to leave me a message using the form below. I'd love to hear from you! </p>
-            <div class="contact-container d-block d-md-flex">
-                <div class="social-medias">
+            <div class="contact-container d-lg-flex">
+                <div class="social-medias" data-aos="flip-right" data-aos-duration="2000">
                     <h2>Contact Details</h2>
                     <div class="email-address">
                         <i class="fa-regular fa-envelope email-btn"></i>
@@ -200,7 +217,7 @@
                     </div>
                     
                 </div>
-                <div class="message-me">
+                <div class="message-me" data-aos="flip-left" data-aos-duration="2000">
                     <h2>Message Me</h2>
                     <form action="submit" class="container contact-form">
                  
@@ -220,11 +237,16 @@
             
         </div>
     </section>
+    
     <footer>
             <i class="fa-solid fa-up-long"></i>
             <p>© 2023 Andria Mae Degoma. All rights reserved.</p>
     </footer>
     <script src="./script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>
 </html>
